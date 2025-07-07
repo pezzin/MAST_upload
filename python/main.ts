@@ -5,7 +5,7 @@ namespace robot {
     //% SENSORS.shadow="string" SENSORS.defl="['pir','light']"
     //% SECONDS.shadow="number" SECONDS.defl=10
     //% LABEL.shadow="string" LABEL.defl="test"
-    //% URL.shadow="string" URL.defl="https://petoiupload.vercel.app/dashboard/api/data"
+    //% URL.shadow="string" URL.defl="https://petoiupload.vercel.app/api/data"
     export function read_and_upload_sensors(parameter: any, block: any) {
         let sensors = parameter.SENSORS.code
         let seconds = parameter.SECONDS.code
