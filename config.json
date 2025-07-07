@@ -15,7 +15,13 @@
       "python": {
           "dir": "python/",
           "main": "main.ts",
-          "dependencies": {}
+          "dependencies": {},
+      	  "files": [
+          "_images/featured.png",
+          "_images/icon.svg",
+          "_menus/index.json",
+          "libraries/libraries.zip"
+	  ]
         }
      }
   }
