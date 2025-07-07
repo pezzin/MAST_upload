@@ -1,27 +1,19 @@
-//% color="#da43ad" iconWidth=50 iconHeight=40
-namespace robot{
-/*    
-    //% block="import libraries" blockType="command"
-    export function importLibraries(parameter: any, block: any) {
-        Generator.addImport(`import binascii`);
-        Generator.addImport(`import serial`);
-		Generator.addImport(`import time`);
-        Generator.addImport(`from PetoiRobot import *`);
-    }
-*/
+//% color="#ff6600" iconWidth=50 iconHeight=40
+namespace robot {
 
-    //% block="Upload sensor data [DATA] locally to [PATH]" blockType="command"
-    //% DATA.shadow="normal"
-    //% PATH.shadow="string" PATH.defl="test"
-    export function save_sensor_data(parameter: any, block: any) {
-        let data = parameter.DATA.code
-        let save_name = parameter.PATH.code
-        Generator.addImport(`from sensors import *`);
-        Generator.addCode(`# This block saves the sensor data to the following directories:`)
-        Generator.addCode(`# Windows: C:\\Users\\{your user name}\\sensor_data`)
-        Generator.addCode(`# MacOS: /Users/{your user name}/sensor_data`)
-        Generator.addCode(`# Linux: /home/{your user name}/sensor_data`)
-        Generator.addCode(`# Please enter the filename in the block`)
-        Generator.addCode(`save_sensor_data(${data}, ${save_name})`)
+    //% block="Read sensors [SENSORS] for [SECONDS] seconds, label [LABEL], upload to [URL]" blockType="command"
+    //% SENSORS.shadow="string" SENSORS.defl="['pir','light']"
+    //% SECONDS.shadow="number" SECONDS.defl=10
+    //% LABEL.shadow="string" LABEL.defl="test"
+    //% URL.shadow="string" URL.defl="https://petoiupload.vercel.app/dashboard/api/data"
+    export function read_and_upload_sensors(parameter: any, block: any) {
+        let sensors = parameter.SENSORS.code
+        let seconds = parameter.SECONDS.code
+        let label = parameter.LABEL.code
+        let url = parameter.URL.code
+
+        Generator.addImport(`from upload import *`);
+        Generator.addCode(`# This block reads the sensors and uploads data directly to your server`);
+        Generator.addCode(`read_sensors(${sensors}, ${seconds}, ${label}, ${url})`);
     }
 }
