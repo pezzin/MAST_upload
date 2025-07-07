@@ -1,12 +1,11 @@
 {
     "name": {
-      "en": "Read Sensors @MAST"
+      "en": "Upload Sensors @MAST"
     },
     "description": {
-      "en": "Read the sensors connected to the Bittle"
+      "en": "Upload the sensors connected to the Bittle"
     },
-    "author": "Amedeo Bonatti",
-    "email": "amedeo.bonatti@ing.unipi.it",
+    "author": "Christian Pezzin e Claudio Zanasi",
     "license": "MIT",
     "isBoard": false,
     "id": "sensors",
