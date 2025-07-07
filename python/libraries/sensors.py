@@ -86,7 +86,7 @@ def main():
     sensors = ['pir', 'light']
     read_time = 10
     label = 'test'
-    server_url = 'https://YOUR_ENDPOINT_URL/api/data'  # sostituisci con il tuo vero endpoint
+    server_url = 'https://petoiupload.vercel.app/api/data'
 
     read_sensors(sensors, read_time, label, server_url)
 
