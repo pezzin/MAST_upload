@@ -1,18 +1,13 @@
-# Sensors library for the MAST summer school
-## Add blocks to Mind+ for reading analog and digital sensors
+# Sensors library for the MAST Summer School
+## Add blocks to Mind+ for reading analog and digital sensors and upload the data in a Supabase DB.
 
 <img src="./python/_images/mast.png" width="300">
 
-More information available at the [summer school website](https://www.academy.mast.org/summer-school-2024/)
+More information available at the [summer school website](https://www.academy.mast.org/summer-school-2025/)
 
 ## Summary
 Library to add the following blocks:
 - read_sensor_data: take as input a list of sensor names and a reading time, and outputs a pandas dataframe containing the data
-- save_sensor_data: take as input the pandas dataframe containing the data, and saves it locally
-
-<img src="./python/_images/read_sensor.png" height="40">
-
-<img src="./python/_images/save_sensor.png" height="40">
 
 Compatible sensors include:
 - 'pir': passive infrared sensor (digital reading, single channel)
@@ -31,4 +26,4 @@ The user can specify the file name. If a file exists in the directory with that 
 
 Download and install [Mind+ Desktop app](https://mindplus.dfrobot.com).
 
-Input the project URL: **https://github.com/AmedeoBonatti/MAST_sensor** in the interface to import this library.
+Input the project URL: **https://github.com/pezzin/MAST_upload** in the interface to import this library.
