@@ -12,7 +12,7 @@ namespace robot {
         let label = parameter.LABEL.code
         let url = parameter.URL.code
 
-        Generator.addImport(`from upload import *`);
+        Generator.addImport(`from sensors import *`);
         Generator.addCode(`# This block reads the sensors and uploads data directly to your server`);
         Generator.addCode(`read_sensors(${sensors}, ${seconds}, ${label}, ${url})`);
     }
